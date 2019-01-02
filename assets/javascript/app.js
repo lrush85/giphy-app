@@ -3,14 +3,15 @@ $(document).ready(function() {
 
 
 
-    var topics = ["michael jordan", "micheal scott", "patrick swayze", "superman", "batman", "pam halpert"];
+    var topics = ["michael jordan", "spiderman", "jonah hill", "superman", "batman", "jenna fischer"];
     
 
+    // This function is to set up gif display
 
     function displayGiphyInfo () {
 
         var topic = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=lUSK1fPW7gLS0BbQoVE7ZsfLOk0e3tja&q=" + topic + "&limit=5&offset=0&rating=G&lang=en";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=lUSK1fPW7gLS0BbQoVE7ZsfLOk0e3tja&q=" + topic + "&limit=10&offset=0&rating=G&lang=en";
 
         
         $.ajax({
@@ -24,7 +25,7 @@ $(document).ready(function() {
                     var topicDiv = $("<div class='topic-div col-md-4 col-sm-6'>");
                     // Set up rating and holder of that rating.
                     var rating = result[i].rating;
-
+                    
                     // Image animate set up
                     var imageAnimate = result[i].images.fixed_height.url;
                     
