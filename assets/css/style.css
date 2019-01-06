@@ -1,47 +1,79 @@
+
 body {
-    background-color: #ECE5F0;
+    background-image: url(../images/5053258764_f66f16e534.jpg);
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+#header {
+    background-color: rgb(196, 37, 37);
+    color:  #333;
+    padding: 20px;
+    width: 100%;
+}
+
+hr {
+    background-color: #fff;
+    height: 6px;
+    margin-top: -3px;
+    margin: 0;
+}
+
+#control-area {
+    display: flex;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.fa-cogs {
+    font-size: 28px;
+    color: red;
+    margin-right: 10px;
 }
 
 h1, h3 {
     text-align: center;
 }
 
-div.container {
-    padding: 10px;
+.options {
+    display: flex;
 }
 
-div.container h1{
-    padding: 10px 30px;
-    background-color: #59114D;
-    color: #ccc;
-    margin: 0 -14px;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+#additional {
+    display: inline;
+    color: #fff;
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
 }
 
-div.container h3 {
-    padding-bottom: 30px;
-    background-color: #59114D;
-    color: #ccc;
-    margin: 0 -14px;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-
+.options h4 {
+    color: #fcfcfc;
 }
 
 .topic {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ECE5F0;
-    color: #333;
-    margin: 2px 0 2px 0;
+    background-color: rgba(255, 255, 255, 0.235);
+    color: #fcfcfc;
+    margin: 20px 10px 10px 40px;
     padding: 6px 6px;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
 }
 
 .topic:hover {
-    background-color: #59114D;
-    color: #ccc;
+    background-color: rgb(196, 37, 37);
+    color: #333;
 }
 
 img.gif {
@@ -63,6 +95,7 @@ form {
 
 label {
     padding-bottom: 10px;
+    font-size: 23px;
 }
 
 input {
@@ -70,17 +103,20 @@ input {
 }
 
 input#topic-input {
-    background-color: transparent;
-    border: 1px solid #59114D;
+    background-color: rgba(255, 255, 255, 0.288);
+    border: 2px solid #fff;
     width: 100%;
+    color: rgb(196, 37, 37);
+
 }
 
 div#gifs.row {
     width: 100%;
     padding-left: 50px;
     margin-top: 10px;
-    background-color: #59114D;
+    background-color: rgb(196, 37, 37);
     margin: 0;
+
 }
 
 div.topic-div {
@@ -95,12 +131,167 @@ div.topic-div p {
 }
 
 #add-topic {
-    background-color: #59114d;
-    color: #ccc;
+    background-color: #fff;
+    color: #333;
     width: 100%;
+    border: none;
+    margin-top: 10px;
 }
 
 #add-topic:hover {
-    background-color: #ECE5F0;
+    background-color: rgb(196, 37, 37);
     color: #333;
 }
+
+span {
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.671);
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding: 5px;
+    position: absolute;
+    left: 23px;
+}
+
+.add-gifs {
+    padding-top: 30px;
+}
+
+#sticky-footer {
+    position: fixed;
+    z-index: -1;
+}
+
+#more-gif-header {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+div#buttons-view {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+    div#buttons-view {
+        margin-left: 60px;
+    }
+
+    select#additional.add {
+        margin-left: 90px;
+    }
+}
+
+@media (max-width: 768px) {
+    select#additional.add {
+        margin-left: 60px;
+    }
+    #more-gif-header {
+        margin-left: 20px;
+    }
+}
+
+button.toggle-sidebar {
+    margin-top: 5px;
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.276);
+    color: #fff;
+    outline-color: transparent;
+    outline: none;
+}
+
+
+@media (max-width: 425px) {
+    div#buttons-view {
+        margin-left: 0;
+    }
+
+    div#control-area {
+        margin-left: 87px;
+    }
+
+    div.topic-div {
+        margin-left: 50px;
+    }
+
+    div.add-gifs {
+        margin-left: -10px;
+    }
+
+    select#additional.add {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    div.topic-div {
+        margin-left: 25px;
+    }
+
+    div#control-area {
+        margin-left: 35px;
+    }
+
+    div.add-gifs {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    div.topic-div {
+        margin-left: 0px;
+    }
+
+    div#buttons-view {
+        margin-left: -10px;
+    }
+
+    div.add-gifs {
+        margin-left: -6px;
+    }
+}
+
+/* Sidebar Styles */
+
+.collapsed {
+    display: none; /* hide it for small displays */
+}
+
+#row-main {
+    overflow-x: hidden; /* necessary to hide collapsed sidebar */
+}
+
+#content {
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+}
+#sidebar {
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+    background-color: rgb(196, 37, 37);
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+    .collapsed {
+        display: block;
+        margin-left: -25%; /* same width as sidebar */
+    }
+}
+
+/* ./Sidebar Styles */
